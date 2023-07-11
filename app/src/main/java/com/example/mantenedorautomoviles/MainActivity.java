@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnIngresar = (Button) findViewById(R.id.btnIngresar);
         btnAgregar = (Button) findViewById(R.id.btnAgregar);
         btnBuscar = (Button) findViewById(R.id.btnBuscar);
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         final GestorDB gestorDB = new GestorDB(getApplicationContext());
 
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase db = gestorDB.getWritableDatabase();
