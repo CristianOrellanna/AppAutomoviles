@@ -9,12 +9,11 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
-import android.os.Bundle;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnIngresar, btnAgregar, btnBuscar, btnEliminar;
+    Button btnAgregar, btnBuscar, btnEliminar;
     EditText txtCodigo, txtModelo, txtPatente, txtPrecio;
 
     @Override
