@@ -32,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         final GestorDB gestorDB = new GestorDB(getApplicationContext());
 
+        //boton agregar
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //db en modo escritura
                 SQLiteDatabase db = gestorDB.getWritableDatabase();
                 ContentValues valores = new ContentValues();
                 valores.put(GestorDB.TablaDatos.COLUMNA_CODIGO,
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //boton buscar
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //db en modo lectura
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Ingresar boton agregar
+        //boton eliminar
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //db en modo escritura
